@@ -12,25 +12,26 @@ then
 fi
 echo $2
 echo $1
-for i in $space1
-do
-	for j in $space1
-	do
-		for k in $space1
-		do
-			for l in $space1
-			do
-				for m in $space1
-				do
+#for i in $space1
+#do
+#	for j in $space1
+#	do
+#		for k in $space1
+#		do
+#			for l in $space1
+#			do
+#				for m in $space1
+#				do
 					#echo $i$j$k$l$m
-					variable=$(openssl passwd -crypt -salt "$1" "$i$j$k$l$m")
-					if [ "$variable" = $2 ]
-					then
-						echo password found: $i$j$k$l$m
-						exit
-					fi
-				done
-			done
-		done
-	done
-done
+#					variable=$(openssl passwd -crypt -salt "$1" "$i$j$k$l$m")
+#					if [ "$variable" = $2 ]
+#					then
+#						echo password found: $i$j$k$l$m
+#						exit
+#					fi
+#				done
+#			done
+#		done
+#	done
+#done
+john --format=$2
